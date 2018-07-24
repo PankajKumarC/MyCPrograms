@@ -1,6 +1,7 @@
 int main() {
-  char a[10]="p1an55kaj", b[10]="\0";
+  char a[10], b[10]="\0";
   int i, j=0, c=0, k;
+  scanf("%s",a);
   
   while(a[c] != '\0')
     c++;
@@ -20,6 +21,8 @@ int main() {
       b[i] = a[i];
     }
   }
+  
+  printf("%s",b);
   
   return 0;
 }
