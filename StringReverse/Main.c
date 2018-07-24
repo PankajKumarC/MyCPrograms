@@ -1,34 +1,25 @@
-#include<stdio.h>
 int main() {
-
-    char a[10] = "abc1d", b[10]="\0";
-    int c=0, i, j, k;
-    //scanf("%d",a);
+  char a[10]="p1an55kaj", b[10]="\0";
+  int i, j=0, c=0, k;
+  
+  while(a[c] != '\0')
+    c++;
     
-    c = 5;
-        
-    for(i=0; i<c; i++) {
-        if(a[i]>=48&&a[i]<=57)
-            b[i] = a[i];
+  for(i=c; i>=0; i--) {
+    if(a[i]>='a'&&a[i]<='z') {
+      b[j] = a[i];
+      j++;
     }
-    
-    j = c-1;
-    i = 0;
-    
-    for(k=0; k<c; k++) {
-      if((a[j]>='a'&&a[j]<='z') && !(b[i]>=48&&b[i]<=57)) {
-        b[i] = a[j];
-        j--;
-        i++;
+  }
+  
+  for(i=0; i<c; i++) {
+    if(a[i]>='0'&&a[i]<='9') {
+      for(k=c-1; k>=i-1; k--) {
+        b[k+1] = b[k];
       }
-      
-      else {
-        j--;
-      }
+      b[i] = a[i];
     }
-    
-    for(i=0; i<c; i++)
-        printf("%c",b[i]);
-
-    return 0;
+  }
+  
+  return 0;
 }
