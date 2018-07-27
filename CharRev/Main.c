@@ -27,7 +27,7 @@ int main() {
           		while(!(a[i]==temp_2)) {
           		temp_2--;
 	        	flag_2++;
-          	}
+          		}
 
           		b[j] = 65+flag_2;
           		j++;
